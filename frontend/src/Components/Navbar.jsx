@@ -14,7 +14,7 @@ const Navbar = () => {
           {/* Logo and Conference Name */}
           <div className="flex items-center">
             <img
-              src="/src/assets/images/mite-logo.jpg" // Replace with your logo path
+              src="/assets/images/mite-logo.jpg" // Replace with your logo path
               alt="MITE Logo"
               className="h-10 w-10"
             />
