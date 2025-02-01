@@ -204,6 +204,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <div className="notification w-full h-8 bg-blue-100 flex item-center">
+            <marquee behavior="" direction=""><h1>Important Notifications goes here-2025</h1></marquee>
+    </div>
     </nav>
   );
 };
