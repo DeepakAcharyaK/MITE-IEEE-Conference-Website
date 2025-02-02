@@ -3,28 +3,33 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
-            <footer className="bg-gray-900 text-white py-6 mt-12">
-                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
-                    <div className="text-center md:text-left mb-4 md:mb-0">
-                        <h2 className="text-lg font-semibold">MITE IEEE Conference</h2>
+            <footer className="bg-gray-900 text-white w-full h-auto px-6 py-4">
+                <div className="container mx-auto ">
+                    <div className="footer-top w-full flex flex-col md:flex-row justify-center md:justify-start items-start gap-4 h-auto  px-2 py-3">
+                        <div className="foot-links">
+                            Useful Links
+                            <ul className='ml-6'>
+                                <li className='hover:cursor-pointer hover:text-yellow-300 text-red-500'>Important Dates</li>
+                                <li className='hover:cursor-pointer hover:text-yellow-300 text-red-500'>Tracks</li>
+                                <li className='hover:cursor-pointer hover:text-yellow-300 text-red-500'>Author Registration</li>
+                                <li className='hover:cursor-pointer hover:text-yellow-300 text-red-500'>Author Guidelines</li>
+                            </ul>
+                        </div>
+                        <div className="foot-contact">
+                            Contact Us
+                            <ul className='ml-6'>
+                                <li>Mangalore Institute of Technology & Engineering (MITE)</li>
+                                <li>Badaga Mijar, Near Moodabidre, Mangalore Tq, DK Dist</li>
+                                <li>Karnataka - 574225</li>
+                                <li>Phone: +91 9741731309/ 9945130850 /8258262695/ 96/ 97</li>
+                                <li> Email: info@mite.ac.in</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="w-full flex flex-col justify-center items-center text-center mb-2 mt-3 md:mb-0">
+                        <h2 className="text-sm font-semibold">Mangalore Institute of Technology & Engineering (MITE)</h2>
                         <p className="text-sm">© {new Date().getFullYear()} All Rights Reserved.</p>
-                    </div>
-                    <div className="flex space-x-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            {/* <FaFacebook className="text-xl hover:text-blue-500 transition duration-300" /> */}
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            {/* <FaTwitter className="text-xl hover:text-blue-400 transition duration-300" /> */}
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                            {/* <FaLinkedin className="text-xl hover:text-blue-600 transition duration-300" /> */}
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            {/* <FaInstagram className="text-xl hover:text-pink-500 transition duration-300" /> */}
-                        </a>
-                    </div>
-                    <div className="text-center md:text-right">
-                        {/* <Link to="/" className="text-sm hover:underline">Institute Website</Link> */}
                     </div>
                 </div>
             </footer>
