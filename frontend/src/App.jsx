@@ -2,9 +2,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing";
 import Contacts from "./Pages/Contacts";
-import Layout from './Layout';
+import Layout from "./Layout";
 import RegistrationDetails from "./Pages/RegistrationDetails";
-import Track from "./Pages/Track";
+import Track from "./Pages/Track";  
 import Committee from "./Pages/Committee";
 
 function App() {
@@ -24,4 +24,3 @@ function App() {
 }
 
 export default App;
-
