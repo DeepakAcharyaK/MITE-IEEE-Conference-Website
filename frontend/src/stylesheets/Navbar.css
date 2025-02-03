@@ -1,0 +1,7 @@
+.menu-items {
+    font-family: "Smooch Sans", serif;
+    transition: .5s ease-in-out .2s;;
+}
+.menu-items:hover {
+    transform: scale(1.05);
+}

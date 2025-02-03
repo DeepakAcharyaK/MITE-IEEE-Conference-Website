@@ -1,4 +1,5 @@
 import "./App.css";
+import "./stylesheets/Fonts.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing";
 import Contacts from "./Pages/Contacts";

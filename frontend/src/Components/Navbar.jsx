@@ -1,3 +1,4 @@
+import '../stylesheets/Navbar.css'
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
@@ -14,14 +15,13 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-    setOpenDropdown(null); // Close dropdown when menu is closed
+    setOpenDropdown(null);
   };
 
   const toggleDropdown = (item) => {
     setOpenDropdown(openDropdown === item ? null : item);
   };
 
-  // Scroll to the element with the ID when the hash changes
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
@@ -64,47 +64,31 @@ const Navbar = () => {
       <nav className="bg-white shadow-md fixed w-full z-50">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 p-2">
-            {/* Logo Section */}
             <div className="flex items-center gap-2">
               <img src="/images/mite-logo.jpg" alt="MITE Logo" className="h-12 w-12" />
               <img src="/images/ieee-logo.png" alt="IEEE Logo" className="h-5" />
             </div>
-
-            {/* Desktop Menu */}
             <div className="hidden md:flex items-center">
-              <ul className="flex gap-8">
+              <ul className="flex gap-8 ">
                 {menuItems.map((item, index) => (
-                  <li key={index} className="relative">
+                  <li key={index} className="menu-items relative text-xl font-semibold">
                     {item.subLinks ? (
                       <div
-                        className="flex items-center gap-1 cursor-pointer text-gray-800 hover:text-blue-600 text-sm font-medium transition duration-300"
+                        className={`flex items-center gap-1 cursor-pointer text-xl text-gray-800 hover:text-red-600 transition duration-300 ${openDropdown === item.name ? 'font-bold' : ''}`}
                         onClick={() => toggleDropdown(item.name)}
                       >
                         <span>{item.name}</span>
-                        {openDropdown === item.name ? <RiArrowUpSLine className="text-sm" /> : <RiArrowDownSLine className="text-sm" />}
+                        {openDropdown === item.name ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
                       </div>
                     ) : (
-                      <Link to={item.link} className="text-gray-800 hover:text-blue-600 text-sm font-medium transition duration-300">
+                      <Link to={item.link} className={`text-gray-800 hover:text-red-600 text-xl font-semibold transition duration-300`}>
                         {item.name}
                       </Link>
-                    )}
-                    {item.subLinks && openDropdown === item.name && (
-                      <ul className="absolute top-8 left-0 bg-white shadow-lg rounded-md py-2 w-48">
-                        {item.subLinks.map((subLink, subIndex) => (
-                          <li key={subIndex}>
-                            <Link to={subLink.link} className="block px-4 py-2 text-gray-800 hover:text-blue-600 text-sm font-medium transition duration-300">
-                              {subLink.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
                     )}
                   </li>
                 ))}
               </ul>
             </div>
-
-            {/* Mobile Menu Button */}
             <div className="flex items-center md:hidden">
               <button onClick={toggleMenu} className="text-3xl focus:outline-none">
                 {isMenuOpen ? <RiCloseFill className="text-gray-800" /> : <HiMenuAlt3 className="text-gray-800" />}
@@ -112,12 +96,10 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu (Sidebar) */}
         <div className={`fixed inset-0 z-50 bg-gray-800 bg-opacity-50 transition-opacity duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`} onClick={closeMenu}>
           <div
             className={`w-64 bg-white h-full transform transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
-            onClick={(e) => e.stopPropagation()} // Prevent clicks inside the sidebar from closing it
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="p-4">
               <div className="flex justify-between items-center mb-4">
@@ -131,38 +113,16 @@ const Navbar = () => {
               </div>
               <ul className="space-y-3">
                 {menuItems.map((item, index) => (
-                  <li key={index}>
-                    {item.subLinks ? (
-                      <div>
-                        <div className="flex items-center justify-between text-gray-800 hover:text-blue-600 text-sm font-medium py-2 px-3 rounded-md transition duration-300 cursor-pointer" onClick={() => toggleDropdown(item.name)}>
-                          <span>{item.name}</span>
-                          {openDropdown === item.name ? <RiArrowUpSLine className="text-sm" /> : <RiArrowDownSLine className="text-sm" />}
-                        </div>
-                        {openDropdown === item.name && (
-                          <ul className="pl-4 mt-2 space-y-2">
-                            {item.subLinks.map((subLink, subIndex) => (
-                              <li key={subIndex}>
-                                <Link to={subLink.link} className="block text-gray-800 hover:text-blue-600 text-sm font-medium py-1 px-3 rounded-md transition duration-300" onClick={closeMenu}>
-                                  {subLink.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ) : (
-                      <Link to={item.link} className="block text-gray-800 hover:text-blue-600 text-sm font-medium py-2 px-3 rounded-md transition duration-300" onClick={closeMenu}>
-                        {item.name}
-                      </Link>
-                    )}
+                  <li key={index} >
+                    <Link to={item.link} className=" menu-items block text-gray-800 hover:text-red-600 text-xl font-semibold hover:text-4xl py-2 px-3 rounded-md transition duration-300" onClick={closeMenu}>
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
-
-        {/* Notification Bar */}
         <div className="notification w-full h-8 bg-blue-100 flex item-center">
           <marquee behavior="scroll" direction="left">
             <h1>Important Notifications go here - 2025</h1>
