@@ -6,6 +6,7 @@ import Committee from '../Components/Commitee'
 import ImpDates from '../Components/ImpDates'
 import Home from '../Components/Home'
 import About from '../Components/About'
+import ActionCards from '../Components/ActionCards'
 import AboutEvent from '../Components/AboutEvent'
 import Footer from '../Components/Footer'
 
@@ -19,9 +20,9 @@ const Landing = () => {
       </div>
       <AboutEvent />
       <ImpDates/>
-      <Committee/>
+      {/* <Committee/> */}
+      <ActionCards/>
       <Venue/>
-      <Footer/>
     </div>
   )
 }

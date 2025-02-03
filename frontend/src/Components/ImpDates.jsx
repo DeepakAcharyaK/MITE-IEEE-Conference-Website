@@ -3,7 +3,7 @@ import React from 'react'
 const ImpDates = () => {
     return (
         <div className="w-full min-h-screen flex flex-col items-center bg-gray-100 py-10 px-4">
-            <div className="w-full md:w-3/4 lg:w-2/3 bg-white p-6 md:p-10 rounded-xl shadow-lg">
+            <div id='impdate' className="w-full md:w-3/4 lg:w-2/3 bg-white p-6 md:p-10 rounded-xl shadow-lg">
 
                 {/* Heading */}
                 <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-8">
