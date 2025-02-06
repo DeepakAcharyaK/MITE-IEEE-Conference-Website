@@ -1,19 +1,10 @@
 .main-container {
     width: 100%;
     height: 100vh;
-    background-image: url('/images/slider-1-mite.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), 
+                url('/images/slider-1-mite.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: auto;
     overflow-x: hidden;
-    background-color: rgba(12, 11, 11, 0.708);
-  }
-.About-container{
-    background-color: rgba(255, 255, 255, 0.652);
 }
-.h-conatiner{
-    background-color: rgba(219, 215, 215, 0.814);
-}
-
-/* bg-[#FDCB06] */

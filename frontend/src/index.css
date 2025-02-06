@@ -13,6 +13,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Baloo Bhai 2", serif;
 }
 
 main {

@@ -33,7 +33,8 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "Home", link: "/#home" },
-    { name: "About Us", link: "/#about" },
+    { name: "About Clg", link: "/#about" },
+    { name: "About CSITSS", link: "/#about" },
     {
       name: "Committee",
       link: "/committee",
@@ -123,9 +124,10 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="notification w-full h-8 bg-blue-100 flex item-center">
+        <hr />
+        <div className="bg-white notification w-full h-8 flex item-center">
           <marquee behavior="scroll" direction="left">
-            <h1>Important Notifications go here - 2025</h1>
+            <h1 className='text-red-600 font-bold text-xl'>Registration closes on 21-03-2025</h1>
           </marquee>
         </div>
       </nav>

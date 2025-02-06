@@ -1,1 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* menu items */
+.menu-items {
+    font-family: "Smooch Sans", serif;
+    transition: .2s ease-in-out .2s;;
+}
+.menu-items:hover {
+    transform: scale(1.05);
+}
+
+/* home */
+.welcome-text{
+    font-family: "Space Grotesk", serif;
+}
+.welcome-text-heading{
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    color: black;
+    font-family: "Audiowide", serif;
+}
+ 
+.audiowide-regular {
+    font-family: "Audiowide", serif;
+}

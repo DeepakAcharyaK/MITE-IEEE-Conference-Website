@@ -14,7 +14,7 @@ const Landing = () => {
   return (
     <div className='overflow-x-hidden'>
       <Navbar />
-      <div className="main-container">
+      <div className="overflow-y-scroll scrollbar-hide main-container">
         <Home />
         <About />
       </div>
