@@ -5,7 +5,7 @@ const Venue = () => {
     return (
 
         <>
-            <div className="w-screen bg-gradient-to-b from-[#ec413b] to-[white] h-auto flex flex-col items-center justify-center pt-5">
+            <div className="w-screen h-auto flex flex-col items-center justify-center pt-5">
                 <h1 className='text-3xl md:text-5xl font-bold text-center text-black mb-8 uppercase audiowide-regular '>Venu</h1>
                 <div className='flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8 gap-4 lg:gap-8'>
 
@@ -21,7 +21,7 @@ const Venue = () => {
 
                     {/* Right Side - Address */}
                     <div className="w-full lg:w-1/2 h-64 lg:h-auto bg-orange-500 rounded-xl overflow-hidden shadow-md">
-                        <video className="w-full h-full object-cover lg:h-96" src="/videos/mite-video.mp4" loop autoPlay ></video>
+                        <video className="w-full h-full object-cover lg:h-96" src="/videos/mite-video.mp4" loop autoPlay muted></video>
                     </div>
 
                 </div>
