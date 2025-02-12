@@ -6,7 +6,7 @@ import Contacts from "./Pages/Contacts";
 import RegistrationDetails from "./Pages/RegistrationDetails";
 import Track from "./Pages/Track";  
 import Committee from "./Pages/Committee";
-import Layout from "./Layout.jsx";
+import Layout from "./Layout";
 
 function App() {
   return (
