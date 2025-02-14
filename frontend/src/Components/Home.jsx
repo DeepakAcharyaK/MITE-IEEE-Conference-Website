@@ -27,8 +27,8 @@ const Home = () => {
       <>
         <div id='home' className="home-conatiner w-screen h-screen flex flex-col justify-center items-center">
           <div className="h-conatiner w-[90%] md:w-[70%] flex flex-col justify-center items-center text-center  gap-2 md:gap-10 rounded-md px-2 py-3">
-            <h1 className='welcome-text-heading text-4xl md:text-7xl  font-extrabold'>WELCOME TO CSITSS-2025</h1>
-            <h2 className='welcome-text text-white font-medium text-2xl md:text-4xl'>8th International Conference on Computational Systems and Information Technology for Sustainable Solutions</h2>
+            <h1 className='welcome-text-heading text-4xl md:text-7xl  font-extrabold'>WELCOME TO INSPIRE-2025</h1>
+            <h2 className='welcome-text text-white font-medium text-2xl md:text-4xl'>INtelligent Systems for Pioneering Innovation in Robotics and Electric mobility</h2>
             <h2 className='welcome-text text-white text-2xl md:text-4xl'>Organized by</h2>
             <h2 className='welcome-text text-white text-2xl md:text-4xl'>Mangalore Institute of Technology & Engineering (MITE)</h2>
           </div>
