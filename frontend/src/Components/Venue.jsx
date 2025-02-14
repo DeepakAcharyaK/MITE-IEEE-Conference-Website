@@ -6,7 +6,7 @@ const Venue = () => {
 
         <>
             <div className="w-screen h-auto flex flex-col items-center justify-center pt-5">
-                <h1 className='text-3xl md:text-5xl font-bold text-center text-black mb-8 uppercase audiowide-regular '>Venu</h1>
+                <h1 className='text-3xl md:text-5xl font-bold text-center text-black mb-8 uppercase audiowide-regular '>Venue</h1>
                 <div className='flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8 gap-4 lg:gap-8'>
 
                     {/* Left Side - Map */}
